@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Motion Detection</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #video-container {
+            position: relative;
+        }
+
+        #motion-detected {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            background-color: #e74c3c;
+            padding: 10px;
+            display: none;
+        }
+
+        video {
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <div id="motion-detected">Motion Detected!</div>
+        <video id="video" playsinline autoplay></video>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/tracking/build/tracking-min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
