@@ -20,14 +20,19 @@
         }
 
         #motion-detected {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: #fff;
-            background-color: #e74c3c;
-            padding: 10px;
-            display: none;
-        }
+    /* ... other styles ... */
+    animation: fadeInOut 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeInOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
         video {
             width: 100%;
