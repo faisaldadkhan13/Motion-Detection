@@ -17,15 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 tracking.track('#video', tracker, { camera: true });
 
+             
                 tracker.on('track', function (event) {
-                    if (event.data.length > 0) {
-                        // Motion detected
-                        motionDetected.style.display = 'block';
-                    } else {
-                        // No motion detected
-                        motionDetected.style.display = 'none';
-                    }
-                });
+            if (event.data.length > 0) { // Motion detected
+                    motionDetected.style.display = 'block';
+                    motionDetected.style.backgroundColor = '#2ecc71';  // Change background color
+                    motionDetected.textContent = 'Motion Detected!';   // Change text content
+    } else {  // No motion detected
+                                motionDetected.style.display = 'none';
+    }
+});
+
             })
             .catch(function (error) {
                 console.error('Error accessing the camera:', error);
